@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Engineering Manager",
+    "company": "Raycast",
+    "dates": "2024 - Present",
+    "location": "Amsterdam"
+  },
+  {
+    "title": "Technical Product Manager",
+    "company": "Pitch",
+    "dates": "2022 - 2024",
+    "location": "Amsterdam"
+  },
+  {
+    "title": "Product Engineer",
+    "company": "Bakken & Bæck",
+    "dates": "2018 - 2022",
+    "location": "Oslo & Amsterdam"
+  },
+  {
+    "title": "Product Engineer",
+    "company": "Fete Typer",
+    "dates": "2016 - 2018",
+    "location": "Oslo"
+  },
+  {
+    "title": "Co-Founder",
+    "company": "DDco",
+    "dates": "2012 - 2015",
+    "location": "New York City"
+  },
+  {
+    "title": "Engineer",
+    "company": "Self-Employed",
+    "dates": "2009 - 2012",
+    "location": "New York City"
+  },
+  {
+    "title": "Industrial Engineer",
+    "company": "UPS + United Airlines",
+    "dates": "2005 - 2008",
+    "location": "Louisville & Chicago"
+  },
+  {
+    "title": "Certified Flight Instructor (CFI)",
+    "company": "Purdue University Airport",
+    "dates": "2004 - 2005",
+    "location": "West Lafayette"
+  }
+]
