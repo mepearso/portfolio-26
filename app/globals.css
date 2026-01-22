@@ -1,14 +1,9 @@
 @import "tailwindcss";
 
-/* Available Fonts:
- * - Source Serif 4: var(--font-source-serif-4)
- * - Schibsted Grotesk: var(--font-schibsted-grotesk)
- */
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  
+
   /* Custom Color Palette */
   --fawn: #f0b67f;
   --bittersweet: #fe5f55;
@@ -29,40 +24,76 @@
   }
 }
 
-body {
-  background: var(--background);
-}
-
-h1, h2, h3, h4 {
-  font-family: Georgia, serif;
+/* Headings use Bricolage Grotesque */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-headings);
 }
 
 h1 > a {
-  font-family: Georgia, serif;
+  font-family: var(--font-headings);
 }
 
-h1{
-  font-size: 2rem;
+h1 {
+  font-weight: 800;
+  font-size: 27px;
+  line-height: 90%;
+}
+
+h2,
+.uppercase-text {
+  font-weight: 369;
+  font-style: Light;
+  font-size: 18px;
+  line-height: 130%;
+  text-transform: uppercase;
+}
+
+.bold-text {
+  font-family: var(--font-headings);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 90%;
+}
+
+.italic-text {
+  font-weight: 300;
+  font-size: 24px;
+  font-style: italic;
 }
 
 @layer base {
-  body, p, div, span, a, li, ul, ol {
-    @apply text-gray-600;
-    font-family: var(--font-schibsted-grotesk), Arial, sans-serif;
-    line-height: 1.5;
+  body,
+  p,
+  div,
+  span,
+  li,
+  ul,
+  ol {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 130%;
+    color: #222222;
   }
 }
 
 /* Custom Styles */
 
-.layout {
-  margin: 2rem; 
+.content-container {
+  margin: 2rem;
 }
 
-.job {
-  margin-bottom: 1rem; 
+a {
+  text-decoration: underline;
+  color: blue;
 }
 
+p {
+  margin-bottom: 1rem;
+}
 
 /* Liquid Glass Animation */
 @keyframes gradientShift {
@@ -77,27 +108,6 @@ h1{
   }
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  33% {
-    transform: translateY(-20px) rotate(120deg);
-  }
-  66% {
-    transform: translateY(10px) rotate(240deg);
-  }
-}
-
-@keyframes morph {
-  0%, 100% {
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  }
-  50% {
-    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-  }
-}
-
 /* Shimmer effect animation */
 @keyframes shimmer {
   0% {
@@ -106,51 +116,4 @@ h1{
   100% {
     background-position: 200% 0;
   }
-}
-
-/* Animation Classes */
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.animate-morph {
-  animation: morph 8s ease-in-out infinite;
-}
-
-.shimmer-effect {
-  position: relative;
-  display: inline-block;
-  background: linear-gradient(
-    90deg,
-    currentColor 0%,
-    currentColor 30%,
-    rgba(255, 255, 255, 0.4) 50%,
-    currentColor 70%,
-    currentColor 100%
-  );
-  background-size: 200% 100%;
-  background-position: -100% 0;
-  animation: shimmer 6s infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: inherit;
-}
-
-.shimmer-effect.useful {
-  animation: shimmer 8s infinite;
-  animation-delay: 0s;
-  animation-timing-function: ease-in-out;
-}
-
-.shimmer-effect.scalable {
-  animation: shimmer 10s infinite;
-  animation-delay: 2s;
-  animation-timing-function: ease-in-out;
-}
-
-.shimmer-effect.private {
-  animation: shimmer 12s infinite;
-  animation-delay: 4s;
-  animation-timing-function: ease-in-out;
 }

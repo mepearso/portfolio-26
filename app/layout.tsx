@@ -1,17 +1,26 @@
 import type { Metadata } from "next";
-import { Schibsted_Grotesk, Source_Serif_4 } from "next/font/google";
+import { Bricolage_Grotesque, STIX_Two_Text } from "next/font/google";
 import "./globals.css";
 
-const sourceSerif4 = Source_Serif_4({
-  variable: "--font-source-serif-4",
+const bricolageGrotesque = Bricolage_Grotesque({
+  variable: "--font-headings",
   subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
-const schibstedGrotesk = Schibsted_Grotesk({
-  variable: "--font-schibsted-grotesk",
+// const crimsonPro = Crimson_Pro({
+//   variable: "--font-body",
+//   subsets: ["latin"],
+//   weight: ["400", "500", "600", "700"],
+//   display: "swap",
+// });
+
+const stix = STIX_Two_Text({
+  variable: "--font-body",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -44,9 +53,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${sourceSerif4.variable} ${schibstedGrotesk.variable} layout antialiased`}
+        className={`${bricolageGrotesque.variable} ${stix.variable} antialiased bg-cover bg-center bg-no-repeat bg-fixed`}
       >
-        {children}
+        {/* <SubtleGradient> */}
+        <div className="content-container flex items-center justify-center h-screen">
+          {children}
+        </div>
+        {/* </SubtleGradient> */}
       </body>
     </html>
   );
