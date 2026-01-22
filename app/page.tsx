@@ -18,7 +18,7 @@ export default function Home() {
         <a href="https://pitch.com/">Pitch</a>, and design studio{" "}
         <a href="https://bakkenbaeck.com/">Bakken & Bæck</a>. 
         
-        Most recently, at Raycast, I led AI & iOS, where I directed the development of AI infrastructure to deliver reliable, performant AI features, including evaluation systems, feedback pipelines, and automated model integration. 
+        Most recently, at Raycast, I led AI & iOS, where I directed the development of AI infrastructure to deliver reliable, performant AI features—including evaluation systems, feedback pipelines, and automated model integration. 
         <br />
         <br />
         I drove significant reliability improvements while conducting user research that shaped our broader AI product strategy, and evolved AI from exploratory features to production-grade systems (20% paid adoption, 108% reliability improvement). Guiding the team that shipped our iOS app, it became <em>App of the Day</em>&nbsp; in all markets. And, I scaled our backend teams 3<span className="text-xs align-middle ps-[2px]">×</span>. 
@@ -27,7 +27,11 @@ export default function Home() {
         Before working in tech, I was a pilot and flight instructor teaching students to fly and prepare for private and commerical pilot certificates.{" "}
       </p>
 
-      <div>
+      <div className="contact-section">
+        <p>
+          <span className="inline-block w-2 h-2 rounded-full bg-green-500 mr-2 align-middle"></span>
+          Currently available for work
+        </p>
         <p>
           <a
             className="block"
@@ -40,6 +44,7 @@ export default function Home() {
             Send me an email
           </a>
         </p>
+        
         { /* <p>
           <button onClick={() => setShowCV(!showCV)}>CV</button>
         </p>
