@@ -39,7 +39,7 @@ h1 > a {
 h1 {
   font-weight: 800;
   font-size: 27px;
-  line-height: 90%;
+  line-height: 100%;
 }
 
 h2,
@@ -52,15 +52,19 @@ h2,
 }
 
 .bold-text {
-  font-family: var(--font-headings);
+  font-family: var(--font-body);
   font-weight: 600;
-  font-size: 24px;
-  line-height: 90%;
+  font-size: 18px;
+  line-height: 100%;
 }
 
 .italic-text {
   font-weight: 300;
   font-size: 24px;
+  font-style: italic;
+}
+
+em {
   font-style: italic;
 }
 
@@ -75,8 +79,9 @@ h2,
     font-family: var(--font-body);
     font-weight: 300;
     font-size: 17px;
-    line-height: 130%;
+    line-height: 140%;
     color: #222222;
+    text-wrap: balance;
   }
 }
 

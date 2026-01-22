@@ -8,27 +8,23 @@ export default function Home() {
 
   return (
     <div className="w-100">
+      <p className="bold-text">Hi, I’m Megan Pearson</p>
       <p>
-        Hi, I'm Megan Pearson, I've been building software for 11 years and
-        leading teams to do so for the last several.
+        I’ve been building software for 11 years. For the last several years, I’ve been leading teams to do so.
       </p>
       <p>
-        I've led product and engineering at{" "}
+        Previously, I’ve led product and engineering at{" "}
         <a href="https://www.raycast.com/">Raycast</a>,{" "}
-        <a href="https://pitch.com/">Pitch</a>, and innovation studio{" "}
-        <a href="https://bakkenbaeck.com/">Bakken & Bæck</a>—evolving AI from
-        exploratory features to production-grade systems (20% paid adoption,
-        108% reliability improvement), scaling backend teams 3
-        <span className="text-xs align-middle ps-[2px]">×</span>, and guiding
-        the team that shipped an App of the Day iOS app.
-      </p>
-      <p>
-        Before tech, I was a pilot and flight instructor teaching students to
-        fly and prepare for private and commerical pilot certificates.{" "}
-      </p>
-      <p>
-        2<span className="text-xs align-middle ps-[2px]">×</span> marathoner
-        (Amsterdam 2024 & Berlin 2025)
+        <a href="https://pitch.com/">Pitch</a>, and design studio{" "}
+        <a href="https://bakkenbaeck.com/">Bakken & Bæck</a>. 
+        
+        Most recently, at Raycast, I led AI & iOS, where I directed the development of AI infrastructure to deliver reliable, performant AI features, including evaluation systems, feedback pipelines, and automated model integration. 
+        <br />
+        <br />
+        I drove significant reliability improvements while conducting user research that shaped our broader AI product strategy, and evolved AI from exploratory features to production-grade systems (20% paid adoption, 108% reliability improvement). Guiding the team that shipped our iOS app, it became <em>App of the Day</em>&nbsp; in all markets. And, I scaled our backend teams 3<span className="text-xs align-middle ps-[2px]">×</span>. 
+        <br />
+        <br />
+        Before working in tech, I was a pilot and flight instructor teaching students to fly and prepare for private and commerical pilot certificates.{" "}
       </p>
 
       <div>
@@ -38,16 +34,16 @@ export default function Home() {
             href="https://www.linkedin.com/in/meganepearson/"
             target="_blank"
           >
-            LinkedIn
+            Find my resumé on LinkedIn
           </a>
-          <a className="block" href="https://x.com/megantronic" target="_blank">
-            X
+          <a className="block" href="mailto:megan.e.pearson@gmail.com" target="_blank">
+            Send me an email
           </a>
         </p>
-        <p>
+        { /* <p>
           <button onClick={() => setShowCV(!showCV)}>CV</button>
         </p>
-        <div>{showCV && <Experience />}</div>
+        <div>{showCV && <Experience />}</div>*/ }
       </div>
 
       {/* <div>
