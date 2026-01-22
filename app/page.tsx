@@ -27,7 +27,7 @@ export default function Home() {
         Before working in tech, I was a pilot and flight instructor teaching students to fly and prepare for private and commerical pilot certificates.
         <br />
         <br />
-        When I’m not working, I run. I’m a 2× marathoner (Amsterdam 2024 & Berlin 2025){" "}
+        When I’m not working, I run. I’m a 2<span className="text-xs align-middle ps-[2px]">×</span> marathoner (Amsterdam 2024 & Berlin 2025){" "}
       </p>
 
       <div className="contact-section">
