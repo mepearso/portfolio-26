@@ -24,7 +24,10 @@ export default function Home() {
         I drove significant reliability improvements while conducting user research that shaped our broader AI product strategy, and evolved AI from exploratory features to production-grade systems (20% paid adoption, 108% reliability improvement). Guiding the team that shipped our iOS app, it became <em>App of the Day</em>&nbsp; in all markets. And, I scaled our backend teams 3<span className="text-xs align-middle ps-[2px]">×</span>. 
         <br />
         <br />
-        Before working in tech, I was a pilot and flight instructor teaching students to fly and prepare for private and commerical pilot certificates.{" "}
+        Before working in tech, I was a pilot and flight instructor teaching students to fly and prepare for private and commerical pilot certificates.
+        <br />
+        <br />
+        When I’m not working, I run. I’m a 2× marathoner (Amsterdam 2024 & Berlin 2025){" "}
       </p>
 
       <div className="contact-section">
