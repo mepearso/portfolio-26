@@ -24,16 +24,32 @@
   }
 }
 
-/* Headings use Bricolage Grotesque */
+@layer base {
+  body,
+  p,
+  div,
+  span,
+  li,
+  ul,
+  ol {
+    font-family: var(--font-stix);
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 140%;
+    color: #222222;
+    text-wrap: balance;
+  }
+}
+
 h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-headings);
+  font-family: var(--font-stix);
 }
 
 h1 > a {
-  font-family: var(--font-headings);
+  font-family: var(--font-stix);
 }
 
 h1 {
@@ -52,40 +68,14 @@ h2,
 }
 
 .bold-text {
-  font-family: var(--font-body);
   font-weight: 600;
   font-size: 18px;
   line-height: 100%;
 }
 
 .italic-text {
-  font-weight: 300;
-  font-size: 24px;
   font-style: italic;
 }
-
-em {
-  font-style: italic;
-}
-
-@layer base {
-  body,
-  p,
-  div,
-  span,
-  li,
-  ul,
-  ol {
-    font-family: var(--font-body);
-    font-weight: 300;
-    font-size: 17px;
-    line-height: 140%;
-    color: #222222;
-    text-wrap: balance;
-  }
-}
-
-/* Custom Styles */
 
 .content-container {
   margin: 2rem;
