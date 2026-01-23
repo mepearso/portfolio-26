@@ -1,25 +1,11 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, STIX_Two_Text } from "next/font/google";
+import { STIX_Two_Text } from "next/font/google";
 import "./globals.css";
 
-const bricolageGrotesque = Bricolage_Grotesque({
-  variable: "--font-headings",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-});
-
-// const crimsonPro = Crimson_Pro({
-//   variable: "--font-body",
-//   subsets: ["latin"],
-//   weight: ["400", "500", "600", "700"],
-//   display: "swap",
-// });
-
 const stix = STIX_Two_Text({
-  variable: "--font-body",
+  variable: "--font-stix",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: "variable",
   display: "swap",
 });
 
@@ -53,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${bricolageGrotesque.variable} ${stix.variable} antialiased bg-cover bg-center bg-no-repeat bg-fixed`}
+        className={`${stix.variable} antialiased bg-cover bg-center bg-no-repeat bg-fixed`}
       >
         {/* <SubtleGradient> */}
         <div className="content-container flex items-center justify-center h-screen">
