@@ -9,7 +9,7 @@ const stix = STIX_Two_Text({
   display: "swap",
 });
 
-export const stixItalic = STIX_Two_Text({
+const stixItalic = STIX_Two_Text({
   variable: "--font-stix-italic",
   subsets: ["latin"],
   weight: "variable",
