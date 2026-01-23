@@ -9,6 +9,14 @@ const stix = STIX_Two_Text({
   display: "swap",
 });
 
+export const stixItalic = STIX_Two_Text({
+  variable: "--font-stix-italic",
+  subsets: ["latin"],
+  weight: "variable",
+  style: "italic",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Megan Pearson - Strategic Engineering",
   description:
@@ -39,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${stix.variable} antialiased bg-cover bg-center bg-no-repeat bg-fixed`}
+        className={`${stix.variable} ${stixItalic.variable} antialiased bg-cover bg-center bg-no-repeat bg-fixed`}
       >
         {/* <SubtleGradient> */}
         <div className="content-container flex items-center justify-center h-screen">

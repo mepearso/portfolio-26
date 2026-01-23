@@ -26,8 +26,9 @@ export default function Home() {
         research that shaped our broader AI product strategy, and evolved AI
         from exploratory features to production-grade systems (20% paid
         adoption, 108% reliability improvement). Guiding the team that shipped
-        our iOS app, it became <em>App of the Day</em>
-        &nbsp; in all markets. And, I scaled our backend teams 3
+        our iOS app, it became{" "}
+        <span className="italic-text">App of the Day </span>
+        in all markets. And, I scaled our backend teams 3
         <span className="text-xs align-middle ps-[2px]">×</span>.
       </p>
       <p>
