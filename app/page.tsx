@@ -1,10 +1,6 @@
 "use client";
 
-import { useState } from "react";
-
 export default function Home() {
-  const [showCV, setShowCV] = useState(false);
-
   return (
     <div className="w-[500]">
       <p className="bold-text">Hi, I’m Megan Pearson</p>
@@ -63,21 +59,7 @@ export default function Home() {
             Send me an email
           </a>
         </p>
-
-        {/* <p>
-          <button onClick={() => setShowCV(!showCV)}>CV</button>
-        </p>
-        <div>{showCV && <Experience />}</div>*/}
       </div>
-
-      {/* <div>
-        <h2>Projects</h2>
-        <Projects />
-      </div>
-      <div>
-        <h2>Experience</h2>
-        <Experience />
-      </div> */}
     </div>
   );
 }
