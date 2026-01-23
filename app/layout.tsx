@@ -18,25 +18,17 @@ const stixItalic = STIX_Two_Text({
 });
 
 export const metadata: Metadata = {
-  title: "Megan Pearson - Strategic Engineering",
+  title: "Megan Pearson - Engineering and Product Leader",
   description:
-    "Engineering Leader with 20+ years of experience. Focused on building useful, scalable, and private AI.",
-  keywords: [
-    "AI Leadership",
-    "Engineering Management",
-    "AI Security",
-    "Cross-platform Teams",
-    "AI Infrastructure",
-    "Privacy",
-    "Data Security",
-  ],
+    "Engineering + product leader with 10+ years of experience. Focused on building useful, scalable, and private AI.",
   authors: [{ name: "Megan Pearson" }],
   openGraph: {
-    title: "Megan Pearson - Strategic Engineering",
+    title: "Megan Pearson - Engineering + Product Leader",
     description:
-      "Engineering Leader with 20+ years of experience. Focused on building useful, scalable, and private AI.",
+      "Engineering + product leader with 10+ years of experience. Focused on building useful, scalable, and private AI.",
     type: "website",
   },
+  viewport: "width=device-width, initial-scale=1, viewport-fit=cover",
 };
 
 export default function RootLayout({
