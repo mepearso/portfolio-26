@@ -28,7 +28,7 @@ export const metadata: Metadata = {
       "Engineering + product leader with 10+ years of experience. Focused on building useful, scalable, and private AI.",
     type: "website",
   },
-  viewport: "width=device-width, initial-scale=1, viewport-fit=cover",
+  // viewport: "width=device-width, initial-scale=1, viewport-fit=cover",
 };
 
 export default function RootLayout({
