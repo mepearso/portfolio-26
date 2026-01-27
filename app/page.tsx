@@ -44,8 +44,8 @@ export default function Home() {
 
       <div className="contact-section">
         <p>
-          <span className="inline-block w-2 h-2 rounded-full bg-green-500 mr-2 align-middle"></span>
-          Available for work Feb 2026
+          <span className="status-dot"></span>
+          Available for work from February 2026. 
         </p>
         <p>
           <a
