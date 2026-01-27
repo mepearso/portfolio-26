@@ -21,12 +21,12 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://megans.website"),
   title: "Megan Pearson",
   description:
-    "Engineering + product leader with 10+ years of experience. Focused on building useful, scalable, and sensible AI.",
+    "Engineering + product leader with 10+ years of experience. Focused on building useful, scalable, and sensible products.",
   authors: [{ name: "Megan Pearson" }],
   openGraph: {
     title: "Megan Pearson",
     description:
-      "Engineering + product leader with 10+ years of experience. Focused on building useful, scalable, and sensible AI.",
+      "Engineering + product leader with 10+ years of experience. Focused on building useful, scalable, and sensible products.",
     type: "website",
     images: [
       {
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Megan Pearson",
     description:
-      "Engineering + product leader with 10+ years of experience. Focused on building useful, scalable, and sensible AI.",
+      "Engineering + product leader with 10+ years of experience. Focused on building useful, scalable, and sensible products.",
     images: ["/og_image.jpg"],
   },
 };
