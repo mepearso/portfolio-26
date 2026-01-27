@@ -12,6 +12,11 @@
   --beige: #eef5db;
 }
 
+::selection {
+  background-color: var(--beige);
+  color: var(--foreground);
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -21,6 +26,23 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+  }
+
+  ::selection {
+    background-color: var(--fawn);
+    color: var(--background);
+  }
+
+  p {
+    color: var(--beige);
+  }
+  
+  p a {
+    color: var(--fawn);
+  }
+
+  .italic-text {
+    color: var(--beige);
   }
 }
 
