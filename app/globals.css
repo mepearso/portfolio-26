@@ -41,7 +41,7 @@
     color: var(--fawn);
   }
 
-  .italic-text {
+  .italic-text, span {
     color: var(--beige);
   }
 }
