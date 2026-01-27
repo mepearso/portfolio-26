@@ -1,5 +1,7 @@
 "use client";
 
+import LinkPreview from "./components/LinkPreview";
+
 export default function Home() {
   return (
     <div className="w-[500]">
@@ -10,12 +12,14 @@ export default function Home() {
       </p>
       <p>
         Previously, I’ve led product and engineering at{" "}
-        <a href="https://www.raycast.com/">Raycast</a>,{" "}
-        <a href="https://pitch.com/">Pitch</a>, and design studio{" "}
-        <a href="https://bakkenbaeck.com/">Bakken & Bæck</a>. Most recently, at
-        Raycast, I led AI & iOS, where I directed the development of AI
-        infrastructure to deliver reliable, performant AI features—including
-        evaluation systems, feedback pipelines, and automated model integration.
+        <LinkPreview href="https://www.raycast.com/">Raycast</LinkPreview>,{" "}
+        <LinkPreview href="https://pitch.com/">Pitch</LinkPreview>, and design
+        studio{" "}
+        <LinkPreview href="https://bakkenbaeck.com/">Bakken & Bæck</LinkPreview>
+        . Most recently, at Raycast, I led AI & iOS, where I directed the
+        development of AI infrastructure to deliver reliable, performant AI
+        features—including evaluation systems, feedback pipelines, and automated
+        model integration.
       </p>
       <p>
         I drove significant reliability improvements while conducting user
