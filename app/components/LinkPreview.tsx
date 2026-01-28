@@ -122,8 +122,8 @@ export default function LinkPreview({
           <div
             className={`link-preview-card ${position.showBelow ? "show-below" : ""}`}
             style={{
-              left: position.x,
-              top: position.y,
+              left: DEBUG_ALWAYS_SHOW ? 500 : position.x,
+              top: DEBUG_ALWAYS_SHOW ? 500 : position.y,
             }}
           >
             <div className="link-preview-media">
@@ -135,7 +135,7 @@ export default function LinkPreview({
                   loop
                   playsInline
                   preload="auto"
-                  className={`${metadata.objectCover && "object-cover"}`}
+                  className={metadata.objectCover ? "object-cover" : ""}
                 />
               ) : metadata.image ? (
                 <Image
