@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #f0f0f0;
   --foreground: #171717;
 
   /* Custom Color Palette */
@@ -10,6 +10,11 @@
   --pearl: #d6d1b1;
   --tea-green: #c7efcf;
   --beige: #eef5db;
+}
+
+::selection {
+  background-color: var(--beige);
+  color: var(--foreground);
 }
 
 @theme inline {
@@ -21,6 +26,23 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+  }
+
+  ::selection {
+    background-color: var(--fawn);
+    color: var(--background);
+  }
+
+  p {
+    color: var(--beige);
+  }
+  
+  p a {
+    color: var(--fawn);
+  }
+
+  .italic-text, span {
+    color: var(--beige);
   }
 }
 
@@ -34,8 +56,8 @@
   ol {
     font-family: var(--font-stix);
     font-weight: 300;
-    font-size: 17px;
-    line-height: 140%;
+    font-size: 18px;
+    line-height: 150%;
     color: #222222;
   }
 }
@@ -83,7 +105,15 @@ h2,
 
 a {
   text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: opacity 0.1s ease-in-out;
+  text-decoration-skip-ink: auto;
   color: blue;
+}
+
+a:hover {
+  opacity: 0.7;
 }
 
 p {

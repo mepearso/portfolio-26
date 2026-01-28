@@ -52,6 +52,8 @@ export default function Home() {
             className="block"
             href="https://www.linkedin.com/in/meganepearson/"
             target="_blank"
+            title="Find my CV on LinkedIn"
+            rel="external"
           >
             Find my CV on LinkedIn
           </a>
@@ -59,6 +61,8 @@ export default function Home() {
             className="block"
             href="mailto:megan.e.pearson@gmail.com"
             target="_blank"
+            title="Send me an email"
+            rel="external"
           >
             Send me an email
           </a>
