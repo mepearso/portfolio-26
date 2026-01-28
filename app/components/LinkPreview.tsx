@@ -9,6 +9,7 @@ const CARD_HEIGHT = 220; // Approximate height of the preview card
 interface LinkMetadata {
   title: string;
   description: string;
+  objectCover?: boolean;
   image?: string;
   video?: string;
 }
@@ -31,6 +32,7 @@ const linkMetadata: Record<string, LinkMetadata> = {
     description:
       "Design and technology studio building digital products, from zero to launch.",
     video: "/images/bb.mp4",
+    objectCover: true,
   },
 };
 
@@ -115,8 +117,7 @@ export default function LinkPreview({
         {children}
       </a>
       {mounted &&
-        (isVisible ||
-          (DEBUG_ALWAYS_SHOW && href === "https://www.raycast.com/")) &&
+        (isVisible || (DEBUG_ALWAYS_SHOW && metadata.title === "Raycast")) &&
         createPortal(
           <div
             className={`link-preview-card ${position.showBelow ? "show-below" : ""}`}
@@ -134,6 +135,7 @@ export default function LinkPreview({
                   loop
                   playsInline
                   preload="auto"
+                  className={`${metadata.objectCover && "object-cover"}`}
                 />
               ) : metadata.image ? (
                 <Image
