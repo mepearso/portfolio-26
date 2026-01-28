@@ -22,6 +22,7 @@
   --color-foreground: var(--foreground);
 }
 
+/* Dark theme */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -36,12 +37,13 @@
   p {
     color: var(--beige);
   }
-  
+
   p a {
     color: var(--fawn);
   }
 
-  .italic-text, span {
+  .italic-text,
+  span {
     color: var(--beige);
   }
 }
@@ -88,6 +90,10 @@ h2,
   text-transform: uppercase;
 }
 
+.content-container {
+  margin: 2rem;
+}
+
 .bold-text {
   font-weight: 600;
   font-size: 18px;
@@ -99,10 +105,6 @@ h2,
   font-style: italic;
 }
 
-.content-container {
-  margin: 2rem;
-}
-
 a {
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -110,6 +112,7 @@ a {
   transition: opacity 0.1s ease-in-out;
   text-decoration-skip-ink: auto;
   color: blue;
+  cursor: pointer;
 }
 
 a:hover {
@@ -118,10 +121,6 @@ a:hover {
 
 p {
   margin-bottom: 1rem;
-}
-
-.contact-section {
-  margin-top: 4em;
 }
 
 /* Status dot with pulse animation */

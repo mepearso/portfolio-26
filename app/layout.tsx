@@ -57,9 +57,9 @@ export default function RootLayout({
         className={`${stix.variable} ${stixItalic.variable} antialiased bg-cover bg-center bg-no-repeat bg-fixed h-full dark:bg-[#222]`}
       >
         {/* <SubtleGradient> */}
-        <div className="content-container flex items-center justify-center min-h-screen pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)]">
+        <main className="content-container flex items-center justify-center min-h-screen pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)]">
           {children}
-        </div>
+        </main>
         {/* </SubtleGradient> */}
       </body>
     </html>
