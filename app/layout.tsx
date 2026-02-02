@@ -19,7 +19,7 @@ const stixItalic = STIX_Two_Text({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://megans.website"),
-  title: "Megan Pearson",
+  title: "Megan Pearson | Engineering & Product Leader",
   description:
     "Engineering and product leader with 10+ years of experience. Focused on building useful, scalable, and sensible products.",
   authors: [{ name: "Megan Pearson" }],
