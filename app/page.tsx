@@ -35,6 +35,11 @@ export default function Home() {
           <span className="text-xs align-middle ps-[2px]">×</span>.
         </p>
         <p>
+          I’m at my best in an environment where ideas can flow freely. I lead
+          with optimism and believe the best teams are built on trust and
+          genuine connection—so that’s where I start.
+        </p>
+        <p>
           Before working in tech, I was a pilot and flight instructor teaching
           students to fly and prepare for private and commerical pilot
           certificates.
@@ -53,22 +58,31 @@ export default function Home() {
         </div>
         <div>
           <a
-            className="block"
-            href="https://www.linkedin.com/in/meganepearson/"
+            className="block hover-arrow"
+            href="https://calendar.notion.so/meet/meganpearson17/chat"
             target="_blank"
-            title="Find my CV on LinkedIn"
+            title="Book a chat"
             rel="external"
           >
-            Find my CV on LinkedIn
+            Book a chat
           </a>
           <a
-            className="block"
+            className="block hover-arrow"
             href="mailto:megan.e.pearson@gmail.com"
             target="_blank"
             title="Send me an email"
             rel="external"
           >
             Send me an email
+          </a>
+          <a
+            className="block hover-arrow"
+            href="https://www.linkedin.com/in/meganepearson/"
+            target="_blank"
+            title="Find my CV on LinkedIn"
+            rel="external"
+          >
+            Find my CV on LinkedIn
           </a>
         </div>
       </div>

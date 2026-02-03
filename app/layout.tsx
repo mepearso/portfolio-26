@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { STIX_Two_Text } from "next/font/google";
-import "./globals.css";
+import "./global.css";
 
 const stix = STIX_Two_Text({
   variable: "--font-stix",
