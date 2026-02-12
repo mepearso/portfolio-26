@@ -59,7 +59,7 @@ export default function Home() {
         <div>
           <a
             className="block hover-arrow"
-            href="https://calendar.notion.so/meet/meganpearson17/chat"
+            href="https://cal.com/megan-pearson/30min"
             target="_blank"
             title="Book a chat"
             rel="external"
