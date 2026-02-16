@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og_image.jpg",
+        url: "/images/og_image.jpg",
         width: 1200,
         height: 1200,
         alt: "Megan Pearson",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: "Megan Pearson",
     description:
       "Engineering and product leader with 10+ years of experience. Focused on building useful, scalable, and sensible products.",
-    images: ["/og_image.jpg"],
+    images: ["/images/og_image.jpg"],
   },
 };
 
