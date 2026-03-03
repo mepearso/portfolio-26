@@ -52,10 +52,6 @@ export default function Home() {
       </div>
 
       <div>
-        <div className="mb-6 md:mb-12">
-          <span className="status-dot"></span>
-          Available for work from February 2026.
-        </div>
         <div>
           <a
             className="block hover-arrow"
