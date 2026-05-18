@@ -88,7 +88,14 @@ h2,
 .bold-text {
   font-weight: 600;
   font-size: 18px;
-  line-height: 100%;
+  line-height: 130%;
+}
+
+.lede {
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 130%;
+  text-wrap: pretty;
 }
 
 .italic-text {
@@ -130,8 +137,29 @@ a:hover {
   opacity: 1;
 }
 
+.hover-arrow-left {
+  position: relative;
+}
+
+.hover-arrow-left::before {
+  content: "←";
+  position: absolute;
+  left: -1.25rem;
+  opacity: 0;
+  transform: translateX(4px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.hover-arrow-left:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 p {
   margin-bottom: 1rem;
+  text-wrap: pretty;
 }
 
 /* Status dot with pulse animation */

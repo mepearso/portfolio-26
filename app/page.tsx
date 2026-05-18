@@ -1,19 +1,10 @@
 "use client";
 
 import DogHover from "./components/DogHover";
+import { writings } from "./data/writings";
 
 // --- Content ---
-// Add new writing entries here. Year groups automatically.
-const writings = [
-  {
-    title: "A New Chapter",
-    href: "/writing/a-new-chapter",
-    date: "17 May",
-    year: "2026",
-  },
-  // { title: "AI in the Field", href: "/writing/ai-in-the-field", date: "—", year: "2026" },
-  // { title: "Dignified Robotics", href: "/writing/dignified-robotics", date: "—", year: "2026" },
-];
+// Add new writing entries here in app/data/writings.ts. Year groups automatically.
 
 // Add or remove connect links here.
 const links = [
@@ -30,8 +21,8 @@ const divider =
 
 export default function Home() {
   return (
-    <div className="w-[500]">
-      <div className="bold-text mb-6 md:mb-12">Hi, I'm Megan Pearson</div>
+    <div className="w-[560px]">
+      <div className="bold-text mb-6 md:mb-12">Hi,<br />I'm Megan Pearson.</div>
 
       <div className="mb-16">
         <p>
@@ -45,8 +36,16 @@ export default function Home() {
           better.
         </p>
         <p>
-          As of 2026 I'm working for Sunrise Robotics, leading Cell Experience —
-          the layer where human meets machine.
+          As of 2026 I'm working for{" "}
+          <a
+            href="https://sunriserobotics.co/"
+            title="Sunrise Robotics"
+            target="_blank"
+            rel="external noopener noreferrer"
+          >
+            Sunrise Robotics
+          </a>
+          , leading <em>Cell Experience</em>—the layer where human meets machine.
         </p>
         <p>
           When not working, I'm often running: a 2
@@ -68,28 +67,50 @@ export default function Home() {
         <div>
           {writings.map((item, i) => {
             const showYear = i === 0 || writings[i - 1].year !== item.year;
-            return (
-              <a
-                key={item.href}
-                href={item.href}
-                style={{
-                  borderBottom: divider,
-                  textDecoration: "none",
-                  color: "var(--foreground)",
-                }}
-                className="flex items-baseline gap-4 py-2 group"
-              >
+            const rowStyle = {
+              borderBottom: divider,
+              textDecoration: "none",
+              color: "var(--foreground)",
+            };
+            const inner = (
+              <>
                 <span
                   className="w-12 shrink-0"
                   style={{ opacity: showYear ? 1 : 0 }}
                 >
                   {item.year}
                 </span>
-                <span className="flex-1 group-hover:opacity-70 transition-opacity">
+                <span
+                  className={`flex-1 transition-opacity ${item.published ? "group-hover:opacity-70" : "opacity-40"}`}
+                >
                   {item.title}
                 </span>
-                <span className="shrink-0">{item.date}</span>
+                <span
+                  className="shrink-0"
+                  style={{ opacity: item.published ? undefined : 0.4 }}
+                >
+                  {item.date}
+                </span>
+              </>
+            );
+            return item.published ? (
+              <a
+                key={item.href}
+                href={item.href}
+                title={item.title}
+                style={rowStyle}
+                className="flex items-baseline gap-4 py-2 group"
+              >
+                {inner}
               </a>
+            ) : (
+              <div
+                key={item.href}
+                style={rowStyle}
+                className="flex items-baseline gap-4 py-2"
+              >
+                {inner}
+              </div>
             );
           })}
         </div>
@@ -107,6 +128,7 @@ export default function Home() {
             key={link.href}
             className="block hover-arrow"
             href={link.href}
+            title={link.label}
             target="_blank"
             rel="external"
           >
