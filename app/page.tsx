@@ -1,6 +1,6 @@
 "use client";
 
-import DogHover from "./components/DogHover";
+import LinkPreview from "./components/LinkPreview";
 import { writings } from "./data/writings";
 
 // --- Content ---
@@ -53,7 +53,7 @@ export default function Home() {
           ran marathons in Amsterdam (2024) and Berlin (2025).
         </p>
         <p>
-          I also have a very good dog, <DogHover />.
+          I also have a very good dog, <LinkPreview previewKey="oscar">Oscar</LinkPreview>.
         </p>
       </div>
 
