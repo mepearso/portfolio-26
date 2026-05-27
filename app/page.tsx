@@ -23,8 +23,7 @@ export default function Home() {
   return (
     <div className="w-[560px]">
       <div className="bold-text mb-6 md:mb-12">Hi, I’m Megan Pearson.</div>
-
-      <div className="mb-16"> 
+      <div className="mb-16">
         <p>
           I’ve been building software for more than a decade. For the last
           several years, I’ve been leading teams to do so.
@@ -40,7 +39,7 @@ export default function Home() {
           <LinkPreview href="https://sunriserobotics.co/" target="_blank">
             Sunrise Robotics
           </LinkPreview>
-          , leading <em>Cell Experience</em>—the layer where human meets
+          , leading <em>Cell Experience</em> – the layer where human meets
           machine.
         </p>
         <p>

@@ -44,7 +44,7 @@ export default function ANewChapter() {
         </div>
       </nav>
 
-      {/* Main content — centred by layout's justify-center */}
+      {/* Main content — centred by layout’s justify-center */}
       <div className="w-[560px]">
         {/* Mobile-only home link — sidebar handles this on md+ */}
         <a
@@ -129,10 +129,10 @@ export default function ANewChapter() {
             </LinkPreview>{" "}
             – and a former colleague from my time at Pitch. We talked about
             industrial manufacturing, Europe’s aging workforce in this space,
-            and Sunrise’s belief that automation could be done
-            differently.Namely, by putting people first. Sunrise’s core mission
-            is bold and clear: to augment humanity through intelligent robotics.
-            Augment, not replace.
+            and Sunrise’s belief that automation could be done differently.
+            Namely, by putting people first. Sunrise’s core mission is bold and
+            clear: to augment humanity through intelligent robotics. Augment,
+            not replace.
           </p>
           <Image
             src="/images/Sunrise_front.png"
@@ -151,7 +151,7 @@ export default function ANewChapter() {
           </p>
           <p>
             I’ll be heading up a new discipline we’re calling Cell Experience.
-            It's the layer where robotic “cells” meet real people on the factory
+            It’s the layer where robotic “cells” meet real people on the factory
             floor, and the goal is ambitious: to set the standard for what good
             human ↔ machine experience should be. I’m asking: how do we build
             automation that works for humans, something people work{" "}
