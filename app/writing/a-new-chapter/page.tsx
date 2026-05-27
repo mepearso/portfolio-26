@@ -65,7 +65,7 @@ export default function ANewChapter() {
           </p>
           <p>
             When I was 14, I started flying airplanes. By 21 I was a flight
-            instructor, and working as an industrial engineer at UPS. I traveled
+            instructor, and working as an Industrial Engineer at UPS. I traveled
             around the US to various hubs in Denver, Chicago, and Seattle to
             work directly with aircraft mechanics. The engineering work I was
             doing there focused on improving their daily work. I observed their
@@ -131,15 +131,15 @@ export default function ANewChapter() {
             industrial manufacturing, Europe’s aging workforce in this space,
             and Sunrise’s belief that automation could be done differently.
             Namely, by putting people first. Sunrise’s core mission is bold and
-            clear: to augment humanity through intelligent robotics. Augment,
-            not replace.
+            clear: to augment humanity through intelligent robotics.
           </p>
+          <p>Augment, not replace.</p>
           <Image
             src="/images/Sunrise_front.png"
             alt="Sunrise Robotics"
             width={2000}
             height={2000}
-            className="w-full mb-6 md:mb-12"
+            className="w-full mt-6 md:mt-12 mb-6 md:mb-12"
           />
           <p>
             I, like I believe most people are, am hesitant about the idea of
