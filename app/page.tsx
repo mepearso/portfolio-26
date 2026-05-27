@@ -22,7 +22,7 @@ const divider =
 export default function Home() {
   return (
     <div className="w-[560px]">
-      <div className="bold-text mb-6 md:mb-12">Hi,<br />I'm Megan Pearson.</div>
+      <div className="bold-text mb-6 md:mb-12">Hi, I'm Megan Pearson.</div>
 
       <div className="mb-16">
         <p>
@@ -45,7 +45,8 @@ export default function Home() {
           >
             Sunrise Robotics
           </a>
-          , leading <em>Cell Experience</em>—the layer where human meets machine.
+          , leading <em>Cell Experience</em>—the layer where human meets
+          machine.
         </p>
         <p>
           When not working, I'm often running: a 2
@@ -53,7 +54,8 @@ export default function Home() {
           ran marathons in Amsterdam (2024) and Berlin (2025).
         </p>
         <p>
-          I also have a very good dog, <LinkPreview previewKey="oscar">Oscar</LinkPreview>.
+          I also have a very good dog,{" "}
+          <LinkPreview previewKey="oscar">Oscar</LinkPreview>.
         </p>
       </div>
 
