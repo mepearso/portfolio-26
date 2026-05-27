@@ -1,3 +1,4 @@
+import Image from "next/image";
 import LinkPreview from "../../components/LinkPreview";
 import { writings } from "../../data/writings";
 
@@ -138,6 +139,13 @@ export default function ANewChapter() {
             is bold and clear: to augment humanity through intelligent robotics.
             Augment, not replace.
           </p>
+          <Image
+            src="/images/Sunrise_front.png"
+            alt="Sunrise Robotics"
+            width={2000}
+            height={2000}
+            className="w-full mb-6 md:mb-12"
+          />
           <p>
             I, like I believe most people are, am hesitant about the idea of
             intelligent robotics (and the hype around it). There’s a very human
