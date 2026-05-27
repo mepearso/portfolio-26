@@ -2,7 +2,7 @@ export const writings = [
   {
     title: "A New Chapter",
     href: "/writing/a-new-chapter",
-    date: "17 May",
+    date: "28 May",
     year: "2026",
     published: true,
   },
