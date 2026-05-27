@@ -4,40 +4,34 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
-const CARD_HEIGHT = 220; // Approximate height of the preview card
+const CARD_HEIGHT = 160;
 
 interface LinkMetadata {
-  title: string;
-  description: string;
   objectCover?: boolean;
   image?: string;
   video?: string;
 }
 
-const DEBUG_ALWAYS_SHOW = false; // Set to false when done testing
-
 const linkMetadata: Record<string, LinkMetadata> = {
   "https://www.raycast.com/": {
-    title: "Raycast",
-    description: "Cult-favorite productivity tool built by and for developers.",
     video: "/images/raycast.mp4",
   },
   "https://pitch.com/": {
-    title: "Pitch",
-    description: "Collaborative presentation software for modern teams.",
     image: "/images/pitch.png",
   },
   "https://bakkenbaeck.com/": {
-    title: "Bakken & Bæck",
-    description:
-      "Design and technology studio building digital products, from zero to launch.",
     video: "/images/bb.mp4",
+    objectCover: true,
+  },
+  oscar: {
+    image: "/images/oscar.jpg",
     objectCover: true,
   },
 };
 
 interface LinkPreviewProps {
-  href: string;
+  href?: string;
+  previewKey?: string;
   children: React.ReactNode;
   className?: string;
   target?: string;
@@ -45,22 +39,22 @@ interface LinkPreviewProps {
 
 export default function LinkPreview({
   href,
+  previewKey,
   children,
   className = "",
   target,
 }: LinkPreviewProps) {
   const [isVisible, setIsVisible] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0, showBelow: false });
-  const linkRef = useRef<HTMLAnchorElement>(null);
+  const triggerRef = useRef<HTMLElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  const metadata = linkMetadata[href];
+  const metadata = linkMetadata[previewKey ?? href ?? ""];
 
   const handleMouseEnter = () => {
     if (!metadata) return;
-
     timeoutRef.current = setTimeout(() => {
-      const rect = linkRef.current?.getBoundingClientRect();
+      const rect = triggerRef.current?.getBoundingClientRect();
       if (rect) {
         const showBelow = rect.top < CARD_HEIGHT;
         setPosition({
@@ -74,9 +68,7 @@ export default function LinkPreview({
   };
 
   const handleMouseLeave = () => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
     setIsVisible(false);
   };
 
@@ -85,46 +77,21 @@ export default function LinkPreview({
   useEffect(() => {
     setMounted(true);
     return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
   }, []);
 
-  // If no metadata, just render a regular link
-  if (!metadata) {
-    return (
-      <a href={href} className={className} target={target}>
-        {children}
-      </a>
-    );
-  }
+  const eventProps = {
+    onMouseEnter: handleMouseEnter,
+    onMouseLeave: handleMouseLeave,
+  };
 
-  return (
-    <>
-      {/* Preload video */}
-      {metadata.video && (
-        <link rel="preload" href={metadata.video} as="video" />
-      )}
-      <a
-        ref={linkRef}
-        href={href}
-        className={className}
-        target={target}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        {children}
-      </a>
-      {mounted &&
-        (isVisible || (DEBUG_ALWAYS_SHOW && metadata.title === "Raycast")) &&
-        createPortal(
+  const preview =
+    mounted && isVisible && metadata
+      ? createPortal(
           <div
             className={`link-preview-card ${position.showBelow ? "show-below" : ""}`}
-            style={{
-              left: DEBUG_ALWAYS_SHOW ? 500 : position.x,
-              top: DEBUG_ALWAYS_SHOW ? 500 : position.y,
-            }}
+            style={{ left: position.x, top: position.y }}
           >
             <div className="link-preview-media">
               {metadata.video ? (
@@ -140,22 +107,49 @@ export default function LinkPreview({
               ) : metadata.image ? (
                 <Image
                   src={metadata.image}
-                  alt={metadata.title}
+                  alt=""
                   width={280}
                   height={140}
                   style={{ objectFit: "cover" }}
+                  className={metadata.objectCover ? "object-cover" : ""}
                 />
               ) : null}
             </div>
-            <div className="link-preview-content">
-              <div className="link-preview-title">{metadata.title}</div>
-              <div className="link-preview-description">
-                {metadata.description}
-              </div>
-            </div>
           </div>,
           document.body,
+        )
+      : null;
+
+  if (href) {
+    return (
+      <>
+        {metadata?.video && (
+          <link rel="preload" href={metadata.video} as="video" />
         )}
+        <a
+          ref={triggerRef as React.RefObject<HTMLAnchorElement>}
+          href={href}
+          className={className}
+          target={target}
+          {...eventProps}
+        >
+          {children}
+        </a>
+        {preview}
+      </>
+    );
+  }
+
+  return (
+    <>
+      <span
+        ref={triggerRef as React.RefObject<HTMLSpanElement>}
+        className={`link-preview-trigger${className ? ` ${className}` : ""}`}
+        {...eventProps}
+      >
+        {children}
+      </span>
+      {preview}
     </>
   );
 }

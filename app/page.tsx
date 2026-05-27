@@ -1,86 +1,142 @@
 "use client";
 
 import LinkPreview from "./components/LinkPreview";
+import { writings } from "./data/writings";
+
+// --- Content ---
+// Add new writing entries here in app/data/writings.ts. Year groups automatically.
+
+// Add or remove connect links here.
+const links = [
+  { label: "Send me an email", href: "mailto:megan.e.pearson@gmail.com" },
+  {
+    label: "Find my CV on LinkedIn",
+    href: "https://www.linkedin.com/in/meganepearson/",
+  },
+];
+// --- End Content ---
+
+const divider =
+  "0.5px solid color-mix(in srgb, var(--foreground) 15%, transparent)";
 
 export default function Home() {
   return (
-    <div className="w-[500]">
-      <div className="bold-text mb-6 md:mb-12">Hi, I’m Megan Pearson</div>
-      <div className="mb-6 md:mb-12">
+    <div className="w-[560px]">
+      <div className="bold-text mb-6 md:mb-12">Hi, I'm Megan Pearson.</div>
+
+      <div className="mb-16">
         <p>
-          I’ve been building software for more than a decade. For the last
-          several years, I’ve been leading teams to do so.
+          I've been building software for more than a decade. For the last
+          several years, I've been leading teams to do so.
         </p>
         <p>
-          Previously, I’ve led product and engineering at{" "}
-          <LinkPreview href="https://www.raycast.com/">Raycast</LinkPreview>,{" "}
-          <LinkPreview href="https://pitch.com/">Pitch</LinkPreview>, and design
-          studio{" "}
-          <LinkPreview href="https://bakkenbaeck.com/">
-            Bakken & Bæck
-          </LinkPreview>
-          . Most recently, at Raycast, I led AI & iOS, where I directed the
-          development of AI infrastructure to deliver reliable, performant AI
-          features—including evaluation systems, feedback pipelines, and
-          automated model integration.
+          From agencies to startups, I've focused on building solutions aimed at
+          solving real world problems. Technology is accelerating and I'm
+          interested in how we use it to make our lives, and the world around us
+          better.
         </p>
         <p>
-          I drove significant reliability improvements while conducting user
-          research that shaped our broader AI product strategy, and evolved AI
-          from exploratory features to production-grade systems (20% paid
-          adoption, 108% reliability improvement). Guiding the team that shipped
-          our iOS app, it became{" "}
-          <span className="italic-text">App of the Day </span>
-          in all markets. And, I scaled our backend teams 3
-          <span className="text-xs align-middle ps-[2px]">×</span>.
+          As of 2026 I'm working for{" "}
+          <a
+            href="https://sunriserobotics.co/"
+            title="Sunrise Robotics"
+            target="_blank"
+            rel="external noopener noreferrer"
+          >
+            Sunrise Robotics
+          </a>
+          , leading <em>Cell Experience</em>—the layer where human meets
+          machine.
         </p>
         <p>
-          I’m at my best in an environment where ideas can flow freely. I lead
-          with optimism and believe the best teams are built on trust and
-          genuine connection—so that’s where I start.
-        </p>
-        <p>
-          Before working in tech, I was a pilot and flight instructor teaching
-          students to fly and prepare for private and commerical pilot
-          certificates.
-        </p>
-        <p>
-          When not working, I’m often running: a 2
+          When not working, I'm often running: a 2
           <span className="text-xs align-middle ps-[2px]">×</span> marathoner, I
-          ran marathons in Amsterdam (2024) and Berlin (2025).{" "}
+          ran marathons in Amsterdam (2024) and Berlin (2025).
+        </p>
+        <p>
+          I also have a very good dog,{" "}
+          <LinkPreview previewKey="oscar">Oscar</LinkPreview>.
         </p>
       </div>
 
-      <div>
-        <div>
-          <a
-            className="block hover-arrow"
-            href="https://cal.com/megan-pearson/30min"
-            target="_blank"
-            title="Book a chat"
-            rel="external"
-          >
-            Book a chat
-          </a>
-          <a
-            className="block hover-arrow"
-            href="mailto:megan.e.pearson@gmail.com"
-            target="_blank"
-            title="Send me an email"
-            rel="external"
-          >
-            Send me an email
-          </a>
-          <a
-            className="block hover-arrow"
-            href="https://www.linkedin.com/in/meganepearson/"
-            target="_blank"
-            title="Find my CV on LinkedIn"
-            rel="external"
-          >
-            Find my CV on LinkedIn
-          </a>
+      <div className="mb-16">
+        <div
+          className="mb-3"
+          style={{ color: "var(--foreground)", opacity: 0.5 }}
+        >
+          Writing
         </div>
+        <div>
+          {writings.map((item, i) => {
+            const showYear = i === 0 || writings[i - 1].year !== item.year;
+            const rowStyle = {
+              borderBottom: divider,
+              textDecoration: "none",
+              color: "var(--foreground)",
+            };
+            const inner = (
+              <>
+                <span
+                  className="w-12 shrink-0"
+                  style={{ opacity: showYear ? 1 : 0 }}
+                >
+                  {item.year}
+                </span>
+                <span
+                  className={`flex-1 transition-opacity ${item.published ? "group-hover:opacity-70" : "opacity-40"}`}
+                >
+                  {item.title}
+                </span>
+                <span
+                  className="shrink-0"
+                  style={{ opacity: item.published ? undefined : 0.4 }}
+                >
+                  {item.date}
+                </span>
+              </>
+            );
+            return item.published ? (
+              <a
+                key={item.href}
+                href={item.href}
+                title={item.title}
+                style={rowStyle}
+                className="flex items-baseline gap-4 py-2 group"
+              >
+                {inner}
+              </a>
+            ) : (
+              <div
+                key={item.href}
+                style={rowStyle}
+                className="flex items-baseline gap-4 py-2"
+              >
+                {inner}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <div>
+        <div
+          className="mb-3"
+          style={{ color: "var(--foreground)", opacity: 0.5 }}
+        >
+          Connect
+        </div>
+        {links.map((link) => (
+          <a
+            key={link.href}
+            className="block hover-arrow"
+            href={link.href}
+            title={link.label}
+            target="_blank"
+            rel="external"
+          >
+            {link.label}
+          </a>
+        ))}
       </div>
     </div>
   );

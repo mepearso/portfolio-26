@@ -56,7 +56,7 @@ export default function RootLayout({
       <body
         className={`${stix.variable} ${stixItalic.variable} antialiased bg-cover bg-center bg-no-repeat bg-fixed h-full`}
       >
-        <main className="content-container flex items-center justify-center min-h-screen pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)]">
+        <main className="content-container flex items-start justify-center min-h-screen pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)]">
           {children}
         </main>
       </body>
