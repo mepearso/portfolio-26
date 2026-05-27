@@ -37,14 +37,9 @@ export default function Home() {
         </p>
         <p>
           As of 2026 I'm working for{" "}
-          <a
-            href="https://sunriserobotics.co/"
-            title="Sunrise Robotics"
-            target="_blank"
-            rel="external noopener noreferrer"
-          >
+          <LinkPreview href="https://sunriserobotics.co/" target="_blank">
             Sunrise Robotics
-          </a>
+          </LinkPreview>
           , leading <em>Cell Experience</em>—the layer where human meets
           machine.
         </p>
