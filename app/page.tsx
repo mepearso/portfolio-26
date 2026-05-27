@@ -22,21 +22,21 @@ const divider =
 export default function Home() {
   return (
     <div className="w-[560px]">
-      <div className="bold-text mb-6 md:mb-12">Hi, I'm Megan Pearson.</div>
+      <div className="bold-text mb-6 md:mb-12">Hi, I’m Megan Pearson.</div>
 
-      <div className="mb-16">
+      <div className="mb-16"> 
         <p>
-          I've been building software for more than a decade. For the last
-          several years, I've been leading teams to do so.
+          I’ve been building software for more than a decade. For the last
+          several years, I’ve been leading teams to do so.
         </p>
         <p>
-          From agencies to startups, I've focused on building solutions aimed at
-          solving real world problems. Technology is accelerating and I'm
+          From agencies to startups, I’ve focused on building solutions aimed at
+          solving real world problems. Technology is accelerating and I’m
           interested in how we use it to make our lives, and the world around us
           better.
         </p>
         <p>
-          As of 2026 I'm working for{" "}
+          As of 2026 I’m working for{" "}
           <LinkPreview href="https://sunriserobotics.co/" target="_blank">
             Sunrise Robotics
           </LinkPreview>
@@ -44,7 +44,7 @@ export default function Home() {
           machine.
         </p>
         <p>
-          When not working, I'm often running: a 2
+          When not working, I’m often running: a 2
           <span className="text-xs align-middle ps-[2px]">×</span> marathoner, I
           ran marathons in Amsterdam (2024) and Berlin (2025).
         </p>
