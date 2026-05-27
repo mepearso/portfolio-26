@@ -124,14 +124,9 @@ export default function ANewChapter() {
           <p>
             One of these conversations had me chatting with Tomaz Stolfa – CEO
             and Co-Founder of{" "}
-            <a
-              href="https://sunriserobotics.co/"
-              title="Sunrise Robotics"
-              target="_blank"
-              rel="external noopener noreferrer"
-            >
+            <LinkPreview href="https://sunriserobotics.co/" target="_blank">
               Sunrise Robotics
-            </a>{" "}
+            </LinkPreview>{" "}
             – and a former colleague from my time at Pitch. We talked about
             industrial manufacturing, Europe’s aging workforce in this space,
             and Sunrise’s belief that automation could be done

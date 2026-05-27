@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
-const CARD_HEIGHT = 160;
+const CARD_HEIGHT = 180;
 
 interface LinkMetadata {
   objectCover?: boolean;
@@ -14,14 +14,17 @@ interface LinkMetadata {
 
 const linkMetadata: Record<string, LinkMetadata> = {
   "https://www.raycast.com/": {
-    video: "/images/raycast.mp4",
+    image: "/images/raycast.jpg",
   },
   "https://pitch.com/": {
-    image: "/images/pitch.png",
+    image: "/images/pitch.jpg",
   },
   "https://bakkenbaeck.com/": {
     video: "/images/bb.mp4",
     objectCover: true,
+  },
+  "https://sunriserobotics.co/": {
+    image: "/images/sunrise-robotics.jpg",
   },
   oscar: {
     image: "/images/oscar.jpg",
@@ -108,8 +111,8 @@ export default function LinkPreview({
                 <Image
                   src={metadata.image}
                   alt=""
-                  width={280}
-                  height={140}
+                  width={240}
+                  height={180}
                   style={{ objectFit: "cover" }}
                   className={metadata.objectCover ? "object-cover" : ""}
                 />
