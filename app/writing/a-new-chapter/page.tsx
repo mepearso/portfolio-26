@@ -139,7 +139,7 @@ export default function ANewChapter() {
             alt="Sunrise Robotics"
             width={2000}
             height={2000}
-            className="w-full mt-6 md:mt-12 mb-6 md:mb-12"
+            className="w-full mt-20 mb-20"
           />
           <p>
             I, like I believe most people are, am hesitant about the idea of
